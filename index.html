@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unobtainium — профессиональные услуги и решения для бизнеса.">
+  <title>Unobtainium — профессиональные решения</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Unobtainium home">
+        <span class="brand-mark">U</span><span>UNOBTAINIUM</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      <nav class="nav" id="nav">
+        <a href="#about" data-i18n="navAbout">О компании</a>
+        <a href="#services" data-i18n="navServices">Услуги</a>
+        <a href="#advantages" data-i18n="navAdvantages">Преимущества</a>
+        <a href="#contacts" data-i18n="navContacts">Контакты</a>
+      </nav>
+      <div class="language-switch" aria-label="Language">
+        <button class="lang active" data-lang="ru">RU</button>
+        <button class="lang" data-lang="kz">KZ</button>
+        <button class="lang" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid"></div>
+      <div class="container hero-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">НАДЁЖНОСТЬ. КОМПЕТЕНТНОСТЬ. РЕЗУЛЬТАТ.</span></div>
+        <h1 data-i18n="heroTitle">Профессиональные решения<br><em>для вашего бизнеса</em></h1>
+        <p class="hero-copy" data-i18n="heroText">Помогаем организациям выстраивать безопасные, эффективные и устойчивые рабочие процессы.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#services" data-i18n="heroButton">Наши направления <span>↗</span></a>
+          <a class="text-link" href="#contacts" data-i18n="contactLink">Связаться с нами <span>→</span></a>
+        </div>
+        <div class="hero-note"><span class="pulse"></span><span data-i18n="heroNote">Работаем с организациями и специалистами</span></div>
+      </div>
+      <div class="hero-side-label">ASTANA · KAZAKHSTAN</div>
+    </section>
+
+    <section class="intro section" id="about">
+      <div class="container intro-layout">
+        <div>
+          <p class="section-kicker" data-i18n="aboutKicker">01 / О КОМПАНИИ</p>
+          <h2 data-i18n="aboutTitle">Экспертный подход.<br><span>Практический результат.</span></h2>
+        </div>
+        <div class="intro-text">
+          <p data-i18n="aboutText">Unobtainium — команда специалистов, ориентированная на качество услуг, профессиональные стандарты и долгосрочное сотрудничество.</p>
+          <p class="muted" data-i18n="aboutNote">Здесь будет размещено подтверждённое описание компании, её опыта и ключевых компетенций.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker" data-i18n="servicesKicker">02 / НАПРАВЛЕНИЯ</p><h2 data-i18n="servicesTitle">Чем мы занимаемся</h2></div>
+          <p data-i18n="servicesLead">Комплексный подход к задачам вашей организации.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><span class="service-number">01</span><div class="service-icon">↗</div><h3 data-i18n="service1Title">Охрана труда</h3><p data-i18n="service1Text">Обучение, консультации и решения в области безопасности труда.</p></article>
+          <article class="service-card"><span class="service-number">02</span><div class="service-icon">⌁</div><h3 data-i18n="service2Title">Промышленная безопасность</h3><p data-i18n="service2Text">Поддержка организаций в вопросах промышленной безопасности.</p></article>
+          <article class="service-card"><span class="service-number">03</span><div class="service-icon">＋</div><h3 data-i18n="service3Title">Пожарная безопасность</h3><p data-i18n="service3Text">Профессиональные решения для повышения пожарной безопасности.</p></article>
+          <article class="service-card"><span class="service-number">04</span><div class="service-icon">◎</div><h3 data-i18n="service4Title">Обучение и оценка</h3><p data-i18n="service4Text">Развитие компетенций и оценка профессиональных знаний.</p></article>
+        </div>
+        <p class="disclaimer" data-i18n="servicesDisclaimer">* Направления указаны как предварительный макет. Перед публикацией необходимо подтвердить перечень услуг у компании.</p>
+      </div>
+    </section>
+
+    <section class="advantages section" id="advantages">
+      <div class="container advantages-layout">
+        <div><p class="section-kicker" data-i18n="advantagesKicker">03 / НАШ ПОДХОД</p><h2 data-i18n="advantagesTitle">Партнёрство,<br><span>основанное на доверии</span></h2></div>
+        <div class="advantage-list">
+          <div class="advantage"><span>01</span><div><h3 data-i18n="adv1Title">Профессионализм</h3><p data-i18n="adv1Text">Внимание к стандартам, деталям и качеству выполнения задач.</p></div></div>
+          <div class="advantage"><span>02</span><div><h3 data-i18n="adv2Title">Практичность</h3><p data-i18n="adv2Text">Решения, ориентированные на реальные потребности бизнеса.</p></div></div>
+          <div class="advantage"><span>03</span><div><h3 data-i18n="adv3Title">Ответственный подход</h3><p data-i18n="adv3Text">Открытая коммуникация и внимание к результату.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contacts">
+      <div class="container contact-layout">
+        <div><p class="section-kicker">04 / CONTACT</p><h2 data-i18n="contactTitle">Обсудим вашу<br><span>задачу?</span></h2><p data-i18n="contactText">Свяжитесь с нами, чтобы уточнить детали сотрудничества.</p></div>
+        <div class="contact-details">
+          <div><span data-i18n="contactAddressLabel">Адрес</span><strong data-i18n="contactAddress">Астана, Казахстан — уточнить адрес</strong></div>
+          <div><span data-i18n="contactPhoneLabel">Телефон</span><strong>+7 (___) ___-__-__</strong></div>
+          <div><span data-i18n="contactEmailLabel">Электронная почта</span><strong>info@example.kz</strong></div>
+          <a class="btn btn-light" href="mailto:info@example.kz" data-i18n="contactButton">Написать нам <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">U</span><span>UNOBTAINIUM</span></a><p>© <span id="year"></span> Unobtainium. <span data-i18n="rights">Все права защищены.</span></p><a href="#home" class="to-top" data-i18n="toTop">Наверх ↑</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
