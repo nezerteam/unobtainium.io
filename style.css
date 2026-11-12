@@ -817,3 +817,24 @@ img {
     align-items: stretch;
 }
 
+
+.stat-number,
+.stat-number-small {
+    padding: 0;
+    margin-bottom: 15px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 68px !important;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--blue);
+    letter-spacing: -3px;
+}
+
+@media (max-width: 700px) {
+    .stat-number,
+    .stat-number-small {
+        font-size: 58px !important;
+    }
+}
+
+
