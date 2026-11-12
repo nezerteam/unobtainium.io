@@ -801,3 +801,145 @@ img {
     transition-duration: .01ms !important;
   }
 }
+
+
+/* ===== FINAL HOMEPAGE CORRECTIONS ===== */
+
+/* Статистика */
+.stats-section {
+  width: min(1200px, 90%);
+  overflow: visible;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+  overflow: visible;
+}
+
+.stat-card {
+  min-width: 0;
+  overflow: visible;
+  padding: 30px 25px !important;
+}
+
+.stat-card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  padding: 0 !important;
+}
+
+.stat-card .stat-number {
+  display: block;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 0 15px !important;
+  font-family: 'Manrope', sans-serif;
+  font-size: 100px !important;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -5px;
+  color: var(--blue);
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.stat-card h3,
+.stat-card p {
+  padding: 0 !important;
+}
+
+/* Кнопки первого экрана */
+.hero .hero-content {
+  width: 100%;
+  max-width: 780px;
+  align-items: flex-start;
+}
+
+.hero .hero-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  width: 100%;
+  margin: 30px 0 0 !important;
+}
+
+.hero .hero-buttons .btn {
+  display: inline-flex !important;
+  width: auto !important;
+  min-width: max-content;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Карточки услуг */
+.service-cards {
+  align-items: stretch;
+}
+
+.service-cards .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-cards .card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: stretch;
+  padding: 0 25px;
+}
+
+.service-cards .card-content h3 {
+  min-height: 54px;
+  padding: 0;
+}
+
+.service-cards .card-content p {
+  flex: 1;
+  padding: 0;
+}
+
+.service-cards .card-content .btn {
+  align-self: flex-start;
+  margin: 22px 0 0;
+}
+
+/* Мобильная версия */
+@media (max-width: 1050px) {
+  .stat-card .stat-number {
+    font-size: 82px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 25px !important;
+  }
+
+  .stat-card .stat-number {
+    font-size: 90px !important;
+    letter-spacing: -4px;
+  }
+
+  .hero .hero-buttons {
+    flex-wrap: wrap !important;
+  }
+
+  .service-cards .card-content h3 {
+    min-height: 0;
+  }
+}
