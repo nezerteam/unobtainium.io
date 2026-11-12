@@ -402,3 +402,41 @@ a {
 .card a:hover {
   text-decoration: underline;
 }
+
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.lang-btn {
+  background: transparent;
+  color: #9aabc0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 7px 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  color: #42a5ff;
+  border-color: #42a5ff;
+  background: rgba(66,165,255,.08);
+}
+
+.header {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .language-switcher {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+}
