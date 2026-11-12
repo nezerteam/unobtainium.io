@@ -3,53 +3,109 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Информация о компании UNOBTAINIUM.">
   <title>UNOBTAINIUM — О компании</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+
 <header class="header">
   <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
+
   <nav class="nav">
     <a href="index.html" data-i18n="home">Главная</a>
-    <a class="current" href="about.html" data-i18n="about">О компании</a>
+    <a href="about.html" data-i18n="about">О компании</a>
     <a href="services.html" data-i18n="services">Услуги</a>
     <a href="training.html" data-i18n="training">Обучение</a>
     <a href="documents.html" data-i18n="documents">Документы</a>
     <a href="contacts.html" data-i18n="contacts">Контакты</a>
   </nav>
+
   <div class="languages">
-    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn current" data-lang="ru">RU</button>
     <button class="lang-btn" data-lang="kz">KZ</button>
     <button class="lang-btn" data-lang="en">EN</button>
   </div>
 </header>
 
 <main>
-  <section class="page-hero">
-    <div class="eyebrow">UNOBTAINIUM</div>
-    <h1 data-i18n="about">О компании</h1>
-    <p data-i18n="aboutSubtitle">Знакомство с UNOBTAINIUM</p>
+  <section class="page-hero hero">
+    <div class="hero-content">
+      <span class="eyebrow">UNOBTAINIUM</span>
+      <h1 data-i18n="about">О компании</h1>
+      <p data-i18n="aboutSubtitle">
+        Узнайте больше о нашей компании и принципах работы.
+      </p>
+    </div>
   </section>
 
   <section class="section">
-    <div class="section-heading">01 / COMPANY</div>
-    <h2 data-i18n="whoTitle">О компании</h2>
-    <p data-i18n="whoText">UNOBTAINIUM — компания, представленная в Казахстане. Эта страница предназначена для знакомства с компанией и размещения основной информации о ней.</p>
-    <img class="feature-image" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1500&q=85" alt="Инженерная деятельность">
+    <div class="about-grid">
+      <div class="about-image">
+        <img
+          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=85"
+          alt="Современное рабочее пространство"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="about-content">
+        <span class="section-heading">01 / UNOBTAINIUM</span>
+        <h2 data-i18n="whoTitle">Кто мы</h2>
+        <p data-i18n="whoText">
+          UNOBTAINIUM — компания, ориентированная на развитие,
+          профессиональный подход и качественное взаимодействие
+ с партнёрами и клиентами.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section class="section contact-banner">
-    <div class="section-heading">02 / INFORMATION</div>
-    <h2 data-i18n="missionTitle">Наша деятельность</h2>
-    <p data-i18n="missionText">На сайте представлена общая информация о компании. Подробности о направлениях работы можно уточнить у представителей компании.</p>
+  <section class="section">
+    <div class="about-grid">
+      <div class="about-content">
+        <span class="section-heading">02 / OUR MISSION</span>
+        <h2 data-i18n="missionTitle">Наша миссия</h2>
+        <p data-i18n="missionText">
+          Постоянное развитие, ответственность и внимание к качеству
+          на каждом этапе работы.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img
+          src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1100&q=85"
+          alt="Рабочее пространство компании"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-banner">
+    <div>
+      <span class="section-heading">UNOBTAINIUM</span>
+      <h2 data-i18n="contactTitle">Есть вопросы?</h2>
+      <p data-i18n="contactText">
+        Свяжитесь с нами, чтобы получить дополнительную информацию.
+      </p>
+    </div>
+    <a href="contacts.html" class="btn" data-i18n="contactButton">
+      Связаться с нами
+    </a>
   </section>
 </main>
 
 <footer class="footer">
-  <p>© <span id="year">2026</span> UNOBTAINIUM. <span data-i18n="rights">Все права защищены.</span></p>
-  <p data-i18n="footerText">Информация на сайте носит ознакомительный характер.</p>
+  <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
+  <p data-i18n="rights">© UNOBTAINIUM. Все права защищены.</p>
+  <p data-i18n="footerText">Официальный сайт компании.</p>
 </footer>
+
 </body>
 </html>
