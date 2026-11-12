@@ -666,3 +666,37 @@ img {
     transition-duration: .01ms !important;
   }
 }
+
+
+/* Исправление расположения кнопок */
+.hero-buttons,
+.contact-banner .btn,
+.section .btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero-buttons {
+    justify-content: flex-start;
+}
+
+.contact-banner {
+    text-align: center;
+}
+
+.contact-banner .btn {
+    justify-content: center;
+    margin: 20px auto 0;
+    width: fit-content;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+}
+
