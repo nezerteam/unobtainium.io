@@ -1,48 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Обучение — UNOBTAINIUM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNOBTAINIUM — Обучение</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <header class="header">
-  <a class="logo" href="index.html">UNOBTAINIUM<span>.</span></a>
-  <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+  <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
   <nav class="nav">
-    <a href="index.html">Главная</a>
-    <a href="about.html">О компании</a>
-    <a href="services.html">Услуги</a>
-    <a class="active" href="training.html">Обучение</a>
-    <a href="documents.html">Документы</a>
-    <a href="contacts.html">Контакты</a>
+    <a href="index.html" data-i18n="home">Главная</a>
+    <a href="about.html" data-i18n="about">О компании</a>
+    <a href="services.html" data-i18n="services">Услуги</a>
+    <a class="current" href="training.html" data-i18n="training">Обучение</a>
+    <a href="documents.html" data-i18n="documents">Документы</a>
+    <a href="contacts.html" data-i18n="contacts">Контакты</a>
   </nav>
+  <div class="languages">
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="kz">KZ</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
 </header>
 
 <main>
   <section class="page-hero">
-    <p class="eyebrow">UNOBTAINIUM / 03</p>
-    <h1>Обучение</h1>
-    <p>Информация об образовательных программах.</p>
+    <div class="eyebrow">UNOBTAINIUM / TRAINING</div>
+    <h1 data-i18n="training">Обучение</h1>
+    <p data-i18n="trainingSubtitle">Обучение и подготовка</p>
   </section>
+
   <section class="section">
-    <h2>Образовательные возможности</h2>
-    <p class="lead">
-      Информация о курсах, программах и условиях обучения
-      будет добавлена после подтверждения компанией.
-    </p>
-    <div class="info-panel">
-      <h3>Программы обучения</h3>
-      <p>Раздел подготовлен для размещения актуальных программ.</p>
+    <h2 data-i18n="training">Обучение</h2>
+    <p data-i18n="trainingIntro">Информация о программах обучения и подготовки будет опубликована после подтверждения их наличия и условий.</p>
+    <div class="cards">
+      <article class="card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80" alt="Обучение">
+        <h3 data-i18n="trainingOne">Программы обучения</h3>
+        <p data-i18n="trainingOneText">Актуальные программы и условия участия уточняйте у представителей компании.</p>
+      </article>
+      <article class="card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="Подготовка специалистов">
+        <h3 data-i18n="trainingTwo">Подготовка специалистов</h3>
+        <p data-i18n="trainingTwoText">Подробности о возможностях подготовки специалистов можно запросить напрямую.</p>
+      </article>
+      <article class="card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=700&q=80" alt="Работа в команде">
+        <h3 data-i18n="trainingThree">Информация для участников</h3>
+        <p data-i18n="trainingThreeText">Даты, формат и условия обучения требуют предварительного уточнения.</p>
+      </article>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <a class="logo" href="index.html">UNOBTAINIUM<span>.</span></a>
-  <p>© <span class="year"></span> UNOBTAINIUM. Предварительный макет сайта.</p>
+  <p>© <span id="year">2026</span> UNOBTAINIUM. <span data-i18n="rights">Все права защищены.</span></p>
+  <p data-i18n="footerText">Информация на сайте носит ознакомительный характер.</p>
 </footer>
 </body>
 </html>
