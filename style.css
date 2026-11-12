@@ -162,12 +162,12 @@ img {
   color: #06111e;
 }
 
-/* HERO */
+/* PAGE HERO */
 
 .page-hero {
   position: relative;
   min-height: 390px;
-  padding: 110px 7% 100px;
+  padding: 110px max(calc((100% - var(--container)) / 2), 5%) 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -228,9 +228,10 @@ img {
 .hero {
   position: relative;
   min-height: 680px;
-  padding: 120px 7%;
+  padding: 100px max(calc((100% - var(--container)) / 2), 5%);
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(5,12,23,.96) 0%, rgba(5,12,23,.75) 55%, rgba(5,12,23,.35) 100%),
@@ -238,7 +239,11 @@ img {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   max-width: 780px;
+  text-align: left;
 }
 
 .hero h1 {
@@ -261,6 +266,24 @@ img {
   margin-bottom: 15px;
 }
 
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.hero-buttons .btn {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
 /* BUTTONS */
 
 .btn {
@@ -278,6 +301,8 @@ img {
   font-weight: 800;
   transition: .3s ease;
   cursor: pointer;
+  text-align: center;
+  white-space: normal;
 }
 
 .btn:hover {
@@ -382,7 +407,11 @@ img {
   line-height: 1.8;
 }
 
-/* ABOUT / INFORMATION */
+.card .btn {
+  margin: 20px 25px 0;
+}
+
+/* ABOUT */
 
 .about-grid {
   display: grid;
@@ -475,6 +504,10 @@ img {
   margin-bottom: 25px;
 }
 
+.contact-banner .btn {
+  margin-top: 5px;
+}
+
 /* FOOTER */
 
 .footer {
@@ -550,7 +583,7 @@ img {
   background: var(--blue);
 }
 
-/* RESPONSIVE */
+/* TABLET */
 
 @media (max-width: 1050px) {
   .header {
@@ -570,6 +603,8 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* MOBILE */
 
 @media (max-width: 700px) {
   .header {
@@ -619,6 +654,20 @@ img {
     padding: 80px 6%;
   }
 
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    min-height: 48px;
+    padding: 12px 18px;
+  }
+
   .section {
     width: 88%;
     padding: 70px 0;
@@ -657,6 +706,8 @@ img {
   }
 }
 
+/* REDUCED MOTION */
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -666,45 +717,3 @@ img {
     transition-duration: .01ms !important;
   }
 }
-
-
-
-/* FIX: выравнивание всех кнопок */
-a.btn,
-button.btn,
-.btn {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    float: none !important;
-    position: relative;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    margin-left: 0;
-    text-align: center;
-}
-
-/* Кнопки в главном блоке */
-.hero-buttons {
-    display: flex !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-
-/* Кнопка в блоке контактов */
-.contact-banner {
-    text-align: center !important;
-}
-
-.contact-banner .btn {
-    margin: 20px auto !important;
-}
-
-/* Кнопки внутри карточек */
-.card .btn {
-    margin-top: 15px;
-}
-
