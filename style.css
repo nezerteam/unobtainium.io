@@ -376,3 +376,29 @@ a {
     padding: 65px 7%;
   }
 }
+
+
+.map-frame {
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  margin-top: 30px;
+}
+
+.map-frame iframe {
+  display: block;
+}
+
+.map-note {
+  color: var(--muted);
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.card a {
+  color: var(--blue);
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
