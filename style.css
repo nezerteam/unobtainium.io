@@ -782,3 +782,38 @@ img {
     width: auto !important;
   }
 }
+
+
+/* Ровное расположение кнопок в карточках */
+
+.cards .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cards .card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+}
+
+.cards .card-content h3 {
+    min-height: 48px;
+}
+
+.cards .card-content p {
+    flex: 1;
+}
+
+.cards .card-content .btn {
+    align-self: flex-start;
+    margin: 22px 0 0;
+}
+
+/* Одинаковая высота карточек */
+.cards {
+    align-items: stretch;
+}
+
