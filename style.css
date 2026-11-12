@@ -668,35 +668,43 @@ img {
 }
 
 
-/* Исправление расположения кнопок */
-.hero-buttons,
-.contact-banner .btn,
-.section .btn {
-    display: flex;
+
+/* FIX: выравнивание всех кнопок */
+a.btn,
+button.btn,
+.btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    float: none !important;
+    position: relative;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin-left: 0;
+    text-align: center;
+}
+
+/* Кнопки в главном блоке */
+.hero-buttons {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
     flex-wrap: wrap;
-    align-items: center;
     gap: 14px;
 }
 
-.hero-buttons {
-    justify-content: flex-start;
-}
-
+/* Кнопка в блоке контактов */
 .contact-banner {
-    text-align: center;
+    text-align: center !important;
 }
 
 .contact-banner .btn {
-    justify-content: center;
-    margin: 20px auto 0;
-    width: fit-content;
+    margin: 20px auto !important;
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    white-space: normal;
+/* Кнопки внутри карточек */
+.card .btn {
+    margin-top: 15px;
 }
 
