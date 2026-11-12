@@ -440,3 +440,28 @@ a {
     margin-right: 12px;
   }
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.lang-btn {
+  flex-shrink: 0;
+}
+
+.nav {
+  flex: 1;
+}
+
+
