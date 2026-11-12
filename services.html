@@ -1,49 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Услуги — UNOBTAINIUM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNOBTAINIUM — Услуги</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <header class="header">
-  <a class="logo" href="index.html">UNOBTAINIUM<span>.</span></a>
-  <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+  <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
   <nav class="nav">
-    <a href="index.html">Главная</a>
-    <a href="about.html">О компании</a>
-    <a class="active" href="services.html">Услуги</a>
-    <a href="training.html">Обучение</a>
-    <a href="documents.html">Документы</a>
-    <a href="contacts.html">Контакты</a>
+    <a href="index.html" data-i18n="home">Главная</a>
+    <a href="about.html" data-i18n="about">О компании</a>
+    <a class="current" href="services.html" data-i18n="services">Услуги</a>
+    <a href="training.html" data-i18n="training">Обучение</a>
+    <a href="documents.html" data-i18n="documents">Документы</a>
+    <a href="contacts.html" data-i18n="contacts">Контакты</a>
   </nav>
+  <div class="languages">
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="kz">KZ</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
 </header>
 
 <main>
   <section class="page-hero">
-    <p class="eyebrow">UNOBTAINIUM / 02</p>
-    <h1>Наши услуги</h1>
-    <p>Направления деятельности компании.</p>
+    <div class="eyebrow">UNOBTAINIUM / SERVICES</div>
+    <h1 data-i18n="services">Услуги</h1>
+    <p data-i18n="servicesSubtitle">Информация о направлениях деятельности</p>
   </section>
+
   <section class="section">
-    <h2>Направления работы</h2>
-    <p class="lead">
-      Перечень услуг будет опубликован после подтверждения
-      официальной информации компании.
-    </p>
+    <h2 data-i18n="services">Услуги</h2>
+    <p data-i18n="servicesIntro">На этой странице размещается информация о направлениях работы компании.</p>
     <div class="cards">
-      <div class="card"><span>01</span><h3>Направление 1</h3><p>Описание будет добавлено.</p></div>
-      <div class="card"><span>02</span><h3>Направление 2</h3><p>Описание будет добавлено.</p></div>
-      <div class="card"><span>03</span><h3>Направление 3</h3><p>Описание будет добавлено.</p></div>
+      <article class="card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=700&q=80" alt="Оборудование">
+        <h3 data-i18n="serviceOne">Информация о деятельности</h3>
+        <p data-i18n="serviceOneText">Описание направлений работы компании будет дополнено после подтверждения официальной информации.</p>
+      </article>
+      <article class="card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="Рабочий процесс">
+        <h3 data-i18n="serviceTwo">Сотрудничество</h3>
+        <p data-i18n="serviceTwoText">По вопросам сотрудничества можно обратиться к представителям компании.</p>
+      </article>
+      <article class="card">
+        <img class="card-image" src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80" alt="Специалисты">
+        <h3 data-i18n="serviceThree">Консультации</h3>
+        <p data-i18n="serviceThreeText">Свяжитесь с компанией, чтобы уточнить доступную информацию.</p>
+      </article>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <a class="logo" href="index.html">UNOBTAINIUM<span>.</span></a>
-  <p>© <span class="year"></span> UNOBTAINIUM. Предварительный макет сайта.</p>
+  <p>© <span id="year">2026</span> UNOBTAINIUM. <span data-i18n="rights">Все права защищены.</span></p>
+  <p data-i18n="footerText">Информация на сайте носит ознакомительный характер.</p>
 </footer>
 </body>
 </html>
