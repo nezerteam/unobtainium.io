@@ -3,62 +3,123 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Направления деятельности UNOBTAINIUM.">
   <title>UNOBTAINIUM — Услуги</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+
 <header class="header">
   <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
+
   <nav class="nav">
     <a href="index.html" data-i18n="home">Главная</a>
     <a href="about.html" data-i18n="about">О компании</a>
-    <a class="current" href="services.html" data-i18n="services">Услуги</a>
+    <a href="services.html" data-i18n="services">Услуги</a>
     <a href="training.html" data-i18n="training">Обучение</a>
     <a href="documents.html" data-i18n="documents">Документы</a>
     <a href="contacts.html" data-i18n="contacts">Контакты</a>
   </nav>
+
   <div class="languages">
-    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn current" data-lang="ru">RU</button>
     <button class="lang-btn" data-lang="kz">KZ</button>
     <button class="lang-btn" data-lang="en">EN</button>
   </div>
 </header>
 
 <main>
-  <section class="page-hero">
-    <div class="eyebrow">UNOBTAINIUM / SERVICES</div>
-    <h1 data-i18n="services">Услуги</h1>
-    <p data-i18n="servicesSubtitle">Информация о направлениях деятельности</p>
+  <section class="page-hero hero">
+    <div class="hero-content">
+      <span class="eyebrow">UNOBTAINIUM</span>
+      <h1 data-i18n="services">Услуги</h1>
+      <p data-i18n="servicesSubtitle">
+        Направления деятельности и возможности сотрудничества.
+      </p>
+    </div>
   </section>
 
   <section class="section">
-    <h2 data-i18n="services">Услуги</h2>
-    <p data-i18n="servicesIntro">На этой странице размещается информация о направлениях работы компании.</p>
+    <div class="section-intro">
+      <span class="section-heading">UNOBTAINIUM / SERVICES</span>
+      <h2 data-i18n="services">Наши услуги</h2>
+      <p data-i18n="servicesIntro">
+        Ознакомьтесь с основными направлениями деятельности компании.
+      </p>
+    </div>
+
     <div class="cards">
       <article class="card">
-        <img class="card-image" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=700&q=80" alt="Оборудование">
-        <h3 data-i18n="serviceOne">Информация о деятельности</h3>
-        <p data-i18n="serviceOneText">Описание направлений работы компании будет дополнено после подтверждения официальной информации.</p>
+        <img
+          class="card-image"
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"
+          alt="Современный офис"
+          loading="lazy"
+        >
+        <div class="card-content">
+          <h3 data-i18n="serviceOne">Направление 01</h3>
+          <p data-i18n="serviceOneText">
+            Информация о первом направлении деятельности компании.
+          </p>
+        </div>
       </article>
+
       <article class="card">
-        <img class="card-image" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="Рабочий процесс">
-        <h3 data-i18n="serviceTwo">Сотрудничество</h3>
-        <p data-i18n="serviceTwoText">По вопросам сотрудничества можно обратиться к представителям компании.</p>
+        <img
+          class="card-image"
+          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85"
+          alt="Рабочий процесс"
+          loading="lazy"
+        >
+        <div class="card-content">
+          <h3 data-i18n="serviceTwo">Направление 02</h3>
+          <p data-i18n="serviceTwoText">
+            Информация о втором направлении деятельности компании.
+          </p>
+        </div>
       </article>
+
       <article class="card">
-        <img class="card-image" src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80" alt="Специалисты">
-        <h3 data-i18n="serviceThree">Консультации</h3>
-        <p data-i18n="serviceThreeText">Свяжитесь с компанией, чтобы уточнить доступную информацию.</p>
+        <img
+          class="card-image"
+          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+          alt="Командное взаимодействие"
+          loading="lazy"
+        >
+        <div class="card-content">
+          <h3 data-i18n="serviceThree">Направление 03</h3>
+          <p data-i18n="serviceThreeText">
+            Информация о третьем направлении деятельности компании.
+          </p>
+        </div>
       </article>
     </div>
+  </section>
+
+  <section class="contact-banner">
+    <div>
+      <span class="section-heading">UNOBTAINIUM</span>
+      <h2 data-i18n="contactTitle">Есть вопросы?</h2>
+      <p data-i18n="contactText">
+        Свяжитесь с нами, чтобы получить дополнительную информацию.
+      </p>
+    </div>
+    <a href="contacts.html" class="btn" data-i18n="contactButton">
+      Связаться с нами
+    </a>
   </section>
 </main>
 
 <footer class="footer">
-  <p>© <span id="year">2026</span> UNOBTAINIUM. <span data-i18n="rights">Все права защищены.</span></p>
-  <p data-i18n="footerText">Информация на сайте носит ознакомительный характер.</p>
+  <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
+  <p data-i18n="rights">© UNOBTAINIUM. Все права защищены.</p>
+  <p data-i18n="footerText">Официальный сайт компании.</p>
 </footer>
+
 </body>
 </html>
