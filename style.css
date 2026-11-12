@@ -717,3 +717,68 @@ img {
     transition-duration: .01ms !important;
   }
 }
+
+
+/* FINAL FIX — HOME PAGE BUTTONS */
+
+.hero .hero-content {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero .hero-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  width: 100% !important;
+  margin: 25px 0 0 !important;
+  padding: 0 !important;
+}
+
+.hero .hero-buttons .btn {
+  display: inline-flex !important;
+  width: auto !important;
+  margin: 0 !important;
+  float: none !important;
+  position: static !important;
+  transform: none;
+}
+
+.stat-number {
+  padding: 25px 25px 0;
+  font-size: clamp(42px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--blue);
+}
+
+.stat-number-small {
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+.contact-banner-content {
+  max-width: 750px;
+}
+
+.contact-banner-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .hero .hero-buttons {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  .hero .hero-buttons .btn {
+    width: auto !important;
+  }
+}
