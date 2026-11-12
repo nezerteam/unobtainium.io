@@ -128,7 +128,7 @@ img {
   width: 100%;
 }
 
-/* LANGUAGE SWITCHER */
+/* LANGUAGES */
 
 .languages {
   display: flex;
@@ -243,6 +243,9 @@ img {
   z-index: 2;
   width: 100%;
   max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
 }
 
@@ -259,29 +262,11 @@ img {
   max-width: 620px;
   color: #b6c4d6;
   font-size: 18px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .hero .eyebrow {
   margin-bottom: 15px;
-}
-
-/* HERO BUTTONS */
-
-.hero-buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 16px;
-  width: 100%;
-  margin-top: 30px;
-}
-
-.hero-buttons .btn {
-  margin: 0;
-  flex: 0 0 auto;
 }
 
 /* BUTTONS */
@@ -302,7 +287,8 @@ img {
   transition: .3s ease;
   cursor: pointer;
   text-align: center;
-  white-space: normal;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btn:hover {
@@ -319,6 +305,23 @@ img {
 .btn-outline:hover {
   background: var(--blue);
   color: #06111e;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 16px;
+  width: 100%;
+  margin: 30px 0 0;
+}
+
+.hero-buttons .btn {
+  margin: 0;
 }
 
 /* SECTIONS */
@@ -359,14 +362,18 @@ img {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
   gap: 24px;
   margin-top: 45px;
 }
 
 .card {
   position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   min-width: 0;
+  height: 100%;
+  overflow: hidden;
   padding: 0 0 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -392,23 +399,65 @@ img {
   transform: scale(1.04);
 }
 
-.card h3 {
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1;
+  min-width: 0;
   padding: 0 25px;
+}
+
+.card h3 {
+  padding: 0;
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
   font-weight: 800;
+  line-height: 1.35;
   margin-bottom: 12px;
 }
 
 .card p {
-  padding: 0 25px;
+  padding: 0;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.8;
 }
 
-.card .btn {
-  margin: 20px 25px 0;
+.card-content .btn,
+.card > .btn {
+  align-self: flex-start;
+  margin: auto 0 0;
+  margin-top: 22px;
+}
+
+/* STATISTICS */
+
+.stat-number,
+.stat-number-small {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin: 0 0 18px;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(76px, 8vw, 100px) !important;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -4px;
+  color: var(--blue);
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.stat-number-small {
+  font-size: clamp(76px, 8vw, 100px) !important;
+}
+
+.cards .card .stat-number,
+.cards .card .stat-number-small {
+  padding-left: 25px !important;
 }
 
 /* ABOUT */
@@ -492,6 +541,10 @@ img {
     linear-gradient(120deg, #11263e, #0a1728);
 }
 
+.contact-banner-content {
+  max-width: 750px;
+}
+
 .contact-banner h2 {
   max-width: 700px;
   font-size: clamp(28px, 4vw, 42px);
@@ -502,6 +555,13 @@ img {
   max-width: 650px;
   color: var(--muted);
   margin-bottom: 25px;
+}
+
+.contact-banner-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
 
 .contact-banner .btn {
@@ -602,6 +662,11 @@ img {
   .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .stat-number,
+  .stat-number-small {
+    font-size: 82px !important;
+  }
 }
 
 /* MOBILE */
@@ -659,7 +724,7 @@ img {
   }
 
   .hero-buttons {
-    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 12px;
   }
 
@@ -680,6 +745,25 @@ img {
 
   .card-image {
     height: 210px;
+  }
+
+  .card-content h3 {
+    min-height: 0;
+  }
+
+  .card-content p {
+    flex: 1;
+  }
+
+  .stat-number,
+  .stat-number-small {
+    font-size: 76px !important;
+    letter-spacing: -3px;
+  }
+
+  .cards .card .stat-number,
+  .cards .card .stat-number-small {
+    padding-left: 20px !important;
   }
 
   .about-grid {
@@ -717,124 +801,3 @@ img {
     transition-duration: .01ms !important;
   }
 }
-
-
-/* FINAL FIX — HOME PAGE BUTTONS */
-
-.hero .hero-content {
-  width: 100%;
-  max-width: 780px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.hero .hero-buttons {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 16px !important;
-  width: 100% !important;
-  margin: 25px 0 0 !important;
-  padding: 0 !important;
-}
-
-.hero .hero-buttons .btn {
-  display: inline-flex !important;
-  width: auto !important;
-  margin: 0 !important;
-  float: none !important;
-  position: static !important;
-  transform: none;
-}
-
-.stat-number {
-  padding: 25px 25px 0;
-  font-size: clamp(42px, 6vw, 64px);
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--blue);
-}
-
-.stat-number-small {
-  font-size: clamp(30px, 5vw, 48px);
-}
-
-.contact-banner-content {
-  max-width: 750px;
-}
-
-.contact-banner-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 20px;
-}
-
-@media (max-width: 700px) {
-  .hero .hero-buttons {
-    flex-wrap: wrap !important;
-    gap: 12px !important;
-  }
-
-  .hero .hero-buttons .btn {
-    width: auto !important;
-  }
-}
-
-
-/* Ровное расположение кнопок в карточках */
-
-.cards .card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.cards .card-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: stretch;
-}
-
-.cards .card-content h3 {
-    min-height: 48px;
-}
-
-.cards .card-content p {
-    flex: 1;
-}
-
-.cards .card-content .btn {
-    align-self: flex-start;
-    margin: 22px 0 0;
-}
-
-/* Одинаковая высота карточек */
-.cards {
-    align-items: stretch;
-}
-
-
-.stat-number,
-.stat-number-small {
-    padding: 0;
-    margin-bottom: 15px;
-    font-family: 'Manrope', sans-serif;
-    font-size: 68px !important;
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--blue);
-    letter-spacing: -3px;
-}
-
-@media (max-width: 700px) {
-    .stat-number,
-    .stat-number-small {
-        font-size: 58px !important;
-    }
-}
-
-
