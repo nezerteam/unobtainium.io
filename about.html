@@ -1,128 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="О компании UNOBTAINIUM — учебно-экспертный центр в Казахстане.">
-  <title>UNOBTAINIUM — О компании</title>
+  <title data-i18n="t_about">О компании — UNOBTAINIUM</title>
+  <meta name="description" content="Экспертиза, безопасность и профессиональная подготовка кадров с 2014 года.">
+  <meta name="theme-color" content="#070d18">
+  <link rel="canonical" href="https://nezerteam.github.io/unobtainium.io/about.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UNOBTAINIUM">
+  <meta property="og:title" content="О компании — UNOBTAINIUM">
+  <meta property="og:description" content="Экспертиза, безопасность и профессиональная подготовка кадров с 2014 года.">
+  <meta property="og:url" content="https://nezerteam.github.io/unobtainium.io/about.html">
+  <meta property="og:image" content="https://nezerteam.github.io/unobtainium.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="topbar">
-  <span>📍 г. Астана, пр. Қабанбай батыр, 2/2 офис 316</span>
-  <span>
-    <a href="tel:+77079907657">+7 (707) 990-76-57</a> · Пн–Пт 9:00–18:00
+<body data-page="about">
+
+<div class="topbar">
+  <a href="https://2gis.kz/astana/search/%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D2%9A%D0%B0%D0%B1%D0%B0%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%202%2F2" target="_blank" rel="noopener"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span data-i18n="addr_short">г. Астана, пр. Қабанбай батыр, 2/2, офис 316</span></a>
+  <span class="topbar-right">
+    <a href="tel:+77079907657"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>+7 (707) 990-76-57</a>
+    <span class="topbar-sep">·</span>
+    <span data-i18n="hours">Пн–Пт 9:00–18:00</span>
   </span>
 </div>
 
-
 <header class="header">
-  <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
-  <nav class="nav">
-    <a href="index.html" data-i18n="home">Главная</a>
-    <a href="about.html" data-i18n="about">О компании</a>
-    <a href="services.html" data-i18n="services">Услуги</a>
-    <a href="training.html" data-i18n="training">Обучение</a>
-    <a href="documents.html" data-i18n="documents">Документы</a>
-    <a href="contacts.html" data-i18n="contacts">Контакты</a>
+  <a href="index.html" class="logo" aria-label="UNOBTAINIUM">UNOBTAINIUM<span>.</span></a>
+
+  <nav class="nav" id="site-nav">
+      <a href="index.html" data-i18n="home">Главная</a>
+      <a href="about.html" class="current" aria-current="page" data-i18n="about">О компании</a>
+      <a href="services.html" data-i18n="services">Услуги</a>
+      <a href="training.html" data-i18n="training">Обучение</a>
+      <a href="documents.html" data-i18n="documents">Документы</a>
+      <a href="contacts.html" data-i18n="contacts">Контакты</a>
+    <a href="contacts.html#request" class="btn nav-cta" data-i18n="cta_request">Оставить заявку</a>
   </nav>
-  <div class="languages">
-    <button class="lang-btn current" data-lang="ru">RU</button>
-    <button class="lang-btn" data-lang="kz">KZ</button>
-    <button class="lang-btn" data-lang="en">EN</button>
+
+  <div class="header-tools">
+    <div class="languages" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="ru" type="button">RU</button>
+      <button class="lang-btn" data-lang="kz" type="button">KZ</button>
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+    </div>
+    <button class="burger" type="button" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span><span class="sr-only" data-i18n="menu">Меню</span>
+    </button>
   </div>
 </header>
 
 <main>
-
-  <section class="page-hero hero">
-    <div class="hero-content">
-      <span class="eyebrow">UNOBTAINIUM · ABOUT US</span>
-      <h1>О компании</h1>
-      <p>Экспертиза, безопасность и профессиональная подготовка кадров с 2014 года.</p>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="eyebrow" data-i18n="about_eyebrow">UNOBTAINIUM / О КОМПАНИИ</span>
+      <h1 data-i18n="about">О компании</h1>
+      <p data-i18n="about_sub">Экспертиза, безопасность и профессиональная подготовка кадров с 2014 года.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="about-grid">
       <div class="about-image">
-        <img
-          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=85"
-          alt="Современное рабочее пространство"
-          loading="lazy">
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy" width="1100" height="733">
       </div>
-
       <div class="about-content">
-        <span class="section-heading">01 / COMPANY</span>
-        <h2>Unobtainium — ТОО «Анобтаниум»</h2>
-        <p>
-          Учебно-экспертный центр «Анобтаниум» —
-          казахстанская компания со штаб-квартирой в Астане,
-          основанная в 2014 году.
-        </p>
-        <p>
-          Компания специализируется на комплексной поддержке
-          бизнеса в вопросах промышленной, пожарной и энергетической
-          безопасности, а также профессиональной подготовке рабочих кадров.
-        </p>
+        <span class="section-heading" data-i18n="ab_company">01 / КОМПАНИЯ</span>
+        <h2 data-i18n="ab_title">Unobtainium — ТОО «Анобтаниум»</h2>
+        <p data-i18n="ab_p1">Учебно-экспертный центр «Анобтаниум» — казахстанская компания со штаб-квартирой в Астане, основанная в 2014 году.</p>
+        <p data-i18n="ab_p2">Компания специализируется на комплексной поддержке бизнеса в вопросах промышленной, пожарной и энергетической безопасности, а также профессиональной подготовке рабочих кадров.</p>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="section-intro">
-      <span class="section-heading">02 / OUR EXPERTISE</span>
-      <h2>Ключевые направления деятельности</h2>
+      <span class="section-heading" data-i18n="ab_expertise">02 / ЭКСПЕРТИЗА</span>
+      <h2 data-i18n="ab_dirs">Ключевые направления деятельности</h2>
     </div>
-
     <div class="cards">
-
-      <article class="card">
-        <img class="card-image"
-          src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=900&q=85"
-          alt="Обучение персонала" loading="lazy">
+      <article class="card icon-card">
         <div class="card-content">
-          <h3>Обучение и аттестация персонала</h3>
-          <p>
-            Курсы повышения квалификации и переподготовки
-            по безопасности и охране труда, пожарно-техническому
-            минимуму и промышленной безопасности.
-          </p>
+          <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3 data-i18n="ab_c1">Обучение и аттестация персонала</h3>
+          <p data-i18n="ab_c1_text">Курсы повышения квалификации и переподготовки по безопасности и охране труда, пожарно-техническому минимуму и промышленной безопасности.</p>
         </div>
       </article>
-
-      <article class="card">
-        <img class="card-image"
-          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85"
-          alt="Аудит и экспертиза" loading="lazy">
+      <article class="card icon-card">
         <div class="card-content">
-          <h3>Аудит и экспертиза</h3>
-          <p>
-            Аттестация рабочих мест по условиям труда,
-            строительный и энергетический аудит, разработка
-            паспортов оборудования и планов ликвидации аварий.
-          </p>
+          <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><path d="M4 21h16"/></svg></div>
+          <h3 data-i18n="ab_c2">Аудит и экспертиза</h3>
+          <p data-i18n="ab_c2_text">Аттестация рабочих мест по условиям труда, строительный и энергетический аудит, разработка паспортов оборудования и планов ликвидации аварий.</p>
         </div>
       </article>
-
-      <article class="card">
-        <img class="card-image"
-          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85"
-          alt="Техническая подготовка специалистов" loading="lazy">
+      <article class="card icon-card">
         <div class="card-content">
-          <h3>Подготовка рабочих специальностей</h3>
-          <p>
-            Обучение техническим профессиям, в том числе
-            электрогазосварщиков, с акцентом на практическую подготовку.
-          </p>
+          <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6a4 4 0 0 0 5 5l-8 8a2 2 0 0 1-3-3l8-8a4 4 0 0 0-2-2z"/></svg></div>
+          <h3 data-i18n="ab_c3">Подготовка рабочих специальностей</h3>
+          <p data-i18n="ab_c3_text">Обучение техническим профессиям, в том числе электрогазосварщиков, с акцентом на практическую подготовку.</p>
         </div>
       </article>
-
     </div>
   </section>
 
@@ -130,20 +117,11 @@
     <div class="about-grid">
       <div class="about-content">
         <span class="section-heading">03 / JOLTAP</span>
-        <h2>Участие в программе JOLTAP</h2>
-        <p>
-          Центр заявляет о работе в качестве официальной
-          учебной площадки государственной программы JOLTAP
-          в Астане. Программа направлена на развитие
-          профессиональных навыков и подготовку специалистов.
-        </p>
+        <h2 data-i18n="ab_joltap_title">Участие в программе JOLTAP</h2>
+        <p data-i18n="ab_joltap_text">Центр работает учебной площадкой государственной программы JOLTAP в Астане. Программа направлена на развитие профессиональных навыков и подготовку специалистов.</p>
       </div>
-
       <div class="about-image">
-        <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1100&q=85"
-          alt="Совместная работа и обучение"
-          loading="lazy">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy" width="1100" height="733">
       </div>
     </div>
   </section>
@@ -151,46 +129,60 @@
   <section class="section">
     <div class="about-grid">
       <div class="about-content">
-        <span class="section-heading">04 / OUR APPROACH</span>
-        <h2>Наш подход к работе</h2>
-        <p>
-          Мы уделяем внимание требованиям законодательства,
-          качеству подготовки документов, профессиональному
-          обучению и индивидуальным задачам предприятий.
-        </p>
-        <p>
-          Наша цель — помогать организациям выстраивать
-          системную работу в области безопасности и подготовки персонала.
-        </p>
+        <span class="section-heading" data-i18n="ab_approach_head">04 / ПОДХОД</span>
+        <h2 data-i18n="ab_approach">Наш подход к работе</h2>
+        <p data-i18n="ab_ap1">Мы уделяем внимание требованиям законодательства, качеству подготовки документов, профессиональному обучению и индивидуальным задачам предприятий.</p>
+        <p data-i18n="ab_ap2">Наша цель — помогать организациям выстраивать системную работу в области безопасности и подготовки персонала.</p>
       </div>
-
       <div class="about-content">
-        <div style="padding: 35px; border: 1px solid rgba(255,255,255,.15); border-radius: 20px; background: rgba(255,255,255,.04);">
-          <span class="section-heading">ESTABLISHED</span>
-          <div style="font-size: clamp(48px, 7vw, 76px); font-weight: 800; letter-spacing: -4px; margin: 15px 0;">2014</div>
-          <h3>8 августа</h3>
-          <p>Дата официальной регистрации ТОО «Анобтаниум».</p>
+        <div class="est-card">
+          <span class="section-heading" data-i18n="ab_est">ДАТА РЕГИСТРАЦИИ</span>
+          <div class="est-year">2014</div>
+          <h3 data-i18n="ab_est_day">8 августа</h3>
+          <p data-i18n="ab_est_text">Дата официальной регистрации ТОО «Анобтаниум».</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="contact-banner">
-    <div>
+    <div class="contact-banner-content">
       <span class="section-heading">UNOBTAINIUM</span>
-      <h2>Станьте нашим партнером</h2>
-      <p>Свяжитесь с нами для обсуждения задач вашего предприятия.</p>
+      <h2 data-i18n="partner_cta_title">Станьте нашим партнёром</h2>
+      <p data-i18n="partner_cta_text">Свяжитесь с нами, чтобы обсудить задачи вашего предприятия.</p>
     </div>
-    <a href="contacts.html" class="btn">Наши контакты</a>
+    <div class="contact-banner-actions">
+      <a href="contacts.html#request" class="btn" data-i18n="cta_request">Оставить заявку</a>
+    </div>
   </section>
-
 </main>
 
 <footer class="footer">
-  <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
-  <p>© UNOBTAINIUM. Все права защищены.</p>
-  <p>Учебно-экспертный центр · Казахстан</p>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="logo">UNOBTAINIUM<span>.</span></a>
+      <p data-i18n="footer_about">Учебно-экспертный центр в Астане с 2014 года</p>
+      <p class="footer-legal">© <span id="year">2025</span> <span data-i18n="legal_name">ТОО «Анобтаниум».</span> <span data-i18n="rights">Все права защищены.</span></p>
+    </div>
+    <div>
+      <h4 data-i18n="footer_nav">Разделы</h4>
+      <div class="footer-links"><a href="index.html" data-i18n="home">Главная</a><a href="about.html" data-i18n="about">О компании</a><a href="services.html" data-i18n="services">Услуги</a><a href="training.html" data-i18n="training">Обучение</a><a href="documents.html" data-i18n="documents">Документы</a><a href="contacts.html" data-i18n="contacts">Контакты</a></div>
+    </div>
+    <div>
+      <h4 data-i18n="footer_contacts">Контакты</h4>
+      <div class="footer-links">
+        <a href="tel:+77079907657">+7 (707) 990-76-57</a>
+        <a href="https://wa.me/77079907657" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/unobtainium2014/" target="_blank" rel="noopener">Instagram · @unobtainium2014</a>
+        <a href="https://2gis.kz/astana/search/%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D2%9A%D0%B0%D0%B1%D0%B0%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%202%2F2" target="_blank" rel="noopener" data-i18n="addr_short">г. Астана, пр. Қабанбай батыр, 2/2, офис 316</a>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<a class="wa-float" href="https://wa.me/77079907657" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4c.2.2 2.2 3.4 5.4 4.8 2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.6z"/></svg><span data-i18n="wa_float">Написать в WhatsApp</span>
+</a>
 
 </body>
 </html>
