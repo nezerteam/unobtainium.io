@@ -258,6 +258,38 @@ a.contact-line:hover { background: var(--paper); }
 .wa-float .wa-icon { width: 26px; height: 26px; }
 .wa-float:hover { background: #1fbe5b; }
 
+
+/* ----------------------------------------------------------- проверяемые факты под первым экраном */
+.trust { border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); background: var(--paper); }
+.trust-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.trust-item { display: grid; align-content: start; gap: 4px; padding: 26px 28px; }
+.trust-item + .trust-item { border-left: 1px solid var(--line); }
+.trust-item strong { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.05; }
+.trust-item span { color: var(--muted); font-size: 15px; }
+.trust-stars { color: var(--yellow-deep) !important; font-size: 18px !important; letter-spacing: 2px; }
+a.trust-item:hover { background: var(--white); }
+a.trust-item:hover strong { text-decoration: underline; text-decoration-color: var(--yellow); text-underline-offset: 5px; }
+
+/* JOLTAP: курс сварщика */
+.joltap-card { padding: clamp(24px, 3vw, 36px); background: var(--paper); border: 1.5px solid var(--ink); border-radius: 8px; }
+.joltap-card p { color: var(--steel); margin: 16px 0 24px; }
+.joltap-days { display: grid; grid-template-columns: 1fr 1fr; margin-top: 20px; border: 1.5px solid var(--ink); border-radius: 6px; overflow: hidden; }
+.joltap-days span { padding: 14px 16px; font-family: var(--display); font-weight: 800; font-size: 40px; line-height: 1; }
+.joltap-days .d-practice { background: var(--yellow); border-left: 1.5px solid var(--ink); }
+.joltap-days span::after { display: block; margin-top: 6px; font-family: var(--body); font-weight: 600; font-size: 14px; }
+.joltap-days .d-theory::after { content: var(--l-theory, "дней теории"); }
+.joltap-days .d-practice::after { content: var(--l-practice, "дней практики"); }
+html[lang="kk"] .joltap-days { --l-theory: "күн теория"; --l-practice: "күн практика"; }
+html[lang="en"] .joltap-days { --l-theory: "days of theory"; --l-practice: "days of practice"; }
+.text-link-inline { border-bottom: 2px solid var(--yellow); }
+.text-link-inline:hover { border-color: var(--ink); }
+
+@media (max-width: 1000px) {
+  .trust-grid { grid-template-columns: 1fr; }
+  .trust-item + .trust-item { border-left: 0; border-top: 1px solid var(--line); }
+  .trust-item { padding: 20px 4px; }
+}
+
 /* ----------------------------------------------------------- адаптив */
 @media (max-width: 1180px) {
   .header-phone { display: none; }
@@ -289,8 +321,14 @@ a.contact-line:hover { background: var(--paper); }
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }
-  .logo { font-size: 21px; }
-  .lang-btn { padding: 6px 8px; }
+  .header-in { gap: 10px; }
+  .header-tools { gap: 8px; }
+  .logo { font-size: 20px; gap: 8px; }
+  .logo-mark { width: 14px; height: 14px; }
+  .lang-btn { padding: 6px 7px; font-size: 12px; }
+  .burger { width: 42px; height: 42px; }
+  .burger span:not(.sr-only) { left: 10px; right: 10px; }
+  .burger span:nth-child(1) { top: 13px; } .burger span:nth-child(2) { top: 19px; } .burger span:nth-child(3) { top: 25px; }
   .hero-actions .btn { width: 100%; }
   .tag { padding: 60px 24px 24px; }
   .check-row { grid-template-columns: 34px minmax(0, 1fr); gap: 14px; padding: 20px 18px; }
@@ -306,6 +344,13 @@ a.contact-line:hover { background: var(--paper); }
   .wa-float { padding: 14px; right: 14px; bottom: 14px; }
   .wa-float span { display: none; }
   .map { min-height: 320px; }
+}
+@media (max-width: 360px) {
+  .logo { font-size: 17px; }
+  .logo-mark { display: none; }
+  .lang-btn { padding: 5px 5px; }
+  h1, .page-head h1 { overflow-wrap: anywhere; hyphens: auto; }
+  h2, h3 { overflow-wrap: anywhere; hyphens: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
